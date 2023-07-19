@@ -75,6 +75,7 @@ nav {
   font-weight: 700;
   color: #eff5f5;
   text-shadow: 11px 2px 21px #1f8a70;
+  -webkit-text-stroke: #00425a 1px;
 }
 .titulo_2 {
   position: absolute;
@@ -99,7 +100,6 @@ nav {
   padding-left: 10px;
   padding-bottom: 10px;
   border-radius: 40px 40px 45px 45px;
-  border-color: #181823;
   background-color: #eff5f5;
   box-shadow: 15px 5px 10px #00425a;
   text-align: center;
@@ -179,6 +179,89 @@ ol {
 .principal--08 {
   display: none;
 }
+.container_grid_2 {
+  background-color: #fc7300;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  justify-content: space-between;
+  height: 300px;
+}
+.redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 15px;
+  gap: 20px;
+  align-items: center;
+}
+.cambio_de_logo {
+  position: relative;
+}
+.cambio_de_logo a {
+  position: absolute;
+  top: -30px;
+  left: -45px;
+  transition: opacity 0.3s ease-in-out;
+}
+.cambio_de_logo a.top:hover {
+  top: -30px;
+  left: -45px;
+  opacity: 0;
+}
+
+.mapa {
+  display: none;
+}
+#colegio_Untrefschool {
+  display: block;
+  margin: 0;
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: max-content;
+  justify-content: space-evenly;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  border-radius: 30px 30px 25px 25px;
+  background-color: #eff5f5;
+}
+.contacto h2 {
+  font-family: Belanosima, serif;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+.contacto h3 {
+  font-family: Belanosima, serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+  color: #00425a;
+}
+.enlaces {
+  font-family: Belanosima, serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+}
+.enlaces:link {
+  color: #00425a;
+}
+.enlaces:visited {
+  color: #00425a;
+}
+.staff {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -254,7 +337,68 @@ ol {
     padding-top: 10px;
     justify-self: center;
   }
+  .container_grid_2 {
+    grid-template-columns: 1fr 270px 1fr;
+    height: max-content;
+    padding-bottom: 5px;
+  }
+  #colegio_Untrefschool {
+    display: none;
+  }
+  .mapa {
+    display: block;
+    text-align: center;
+  }
+  .mapa h2 {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0;
+    text-shadow: 11px 2px 21px #1f8a70;
+  }
+  .enlaces {
+    font-size: 1.5em;
+  }
+  .contacto h3 {
+    font-size: 1.5em;
+  }
+  .staff {
+    display: block;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    grid-column: 1/4;
+    justify-self: center;
+  }
 }
+@media screen and (min-width: 1024px) {
+  body {
+    margin: auto;
+    width: 1024px;
+    background-color: #eff5f5;
+  }
+  main {
+    background-color: #1f8a70;
+  }
+  .titulo_1 {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    font-size: 3.5em;
+  }
+  .titulo_2 {
+    position: absolute;
+    font-size: 1.8em;
+    top: 166px;
+    left: 270px;
+  }
+  .container_grid_2 {
+    grid-template-columns: 1fr 400px 1fr;
+    height: max-content;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   body {
     margin: auto;
@@ -288,6 +432,9 @@ ol {
 
   .principal--03 {
     order: 3;
+  }
+  .principal--03 p {
+    line-height: 2rem;
   }
   .principal--04 {
     order: 5;
@@ -324,5 +471,8 @@ ol {
   }
   .noticias {
     font-size: 1.2em;
+  }
+  .contacto {
+    justify-self: center;
   }
 }
