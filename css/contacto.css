@@ -91,6 +91,10 @@ form label {
   font-size: 1em;
   color: #eff5f5;
 }
+.form-control:focus {
+  border-color: #fc7300;
+  box-shadow: 0 0 1px 1px #fc7300;
+}
 .boton {
   text-align: center;
 }

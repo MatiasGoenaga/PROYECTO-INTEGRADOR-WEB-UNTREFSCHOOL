@@ -446,6 +446,9 @@ ol {
   .principal--05 {
     order: 4;
   }
+  .principal--05 li {
+    line-height: 1.5em;
+  }
   .principal--06 {
     order: 2;
     width: 60%;
