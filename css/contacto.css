@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+
+body {
+  margin: 0;
+  background-color: #1f8a70;
+}
+a {
+  text-decoration: none;
+}
+header {
+  background-color: #fc7300;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+  gap: 3px;
+  justify-content: center;
+}
+.menu {
+  padding: 5px;
+  height: 32px;
+  background-color: #eff5f5;
+  color: #181823;
+  text-decoration: none;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 8px 8px 22px #181823;
+  font-family: Belanosima, serif;
+  font-weight: 600;
+  font-size: 1em;
+}
+.menu:hover {
+  background-color: #00425a;
+  color: #eff5f5;
+  box-shadow: 5px 5px 16px #1f8a70;
+}
+
+.logo {
+  position: relative;
+}
+.texto_formulario {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: #eff5f5;
+  padding: 4px;
+  opacity: 0;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 0.8em;
+  color: #181823;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 8px 8px 22px #181823;
+}
+
+.texto_formulario:hover {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.uno {
+  position: relative;
+}
+
+.uno::before {
+  content: "";
+  background-image: url(../images/fondo_colegio.png);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.uno h1,
+h2 {
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  font-family: Belanosima, serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #eff5f5;
+}
+form {
+  position: relative;
+}
+form label {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: #eff5f5;
+}
+.boton {
+  text-align: center;
+}
+.btn {
+  background-color: #fc7300;
+  font-family: Belanosima, serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #181823;
+  border-color: #eff5f5;
+}
+.btn-primary:hover {
+  background-color: #00425a;
+  color: #eff5f5;
+  border-color: #eff5f5;
+}
+
+@media screen and (min-width: 768px) {
+  .uno::before {
+    background-size: cover;
+  }
+  nav {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: auto;
+    width: 1024px;
+    background-color: #eff5f5;
+  }
+  main {
+    background-color: #1f8a70;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    margin: auto;
+    width: 1440px;
+    background-color: #eff5f5;
+  }
+  main {
+    background-color: #1f8a70;
+    border: #00425a solid 1px;
+  }
+}
